@@ -1,11 +1,13 @@
+import { Button } from "@components/button";
 import { GroupCard } from "@components/groupCard";
 import { Header } from "@components/header";
 import { Highlight } from "@components/highlight";
 import { useState } from "react";
-import { Conteiner, GroupsConteiner } from "./style";
+import { FlatList, Text } from "react-native";
+import { Conteiner } from "./style";
 
 function Home() {
-    const [ groupsName, setGroupsName ] = useState(["ignite", "ocb"]);
+    const [ groups, setGroups ] = useState(["ignite", "ocb"]);
 
     return (
         <Conteiner>
@@ -14,11 +16,16 @@ function Home() {
                 title="Turmas"
                 subtitle="Jogue com a sua turma"
             />
-            <GroupsConteiner>
-                {groupsName.map(group => (
-                    <GroupCard name={group} key={group}/>
-                ))}
-            </GroupsConteiner>
+            <FlatList
+                data={groups}
+                keyExtractor={item => item}
+                renderItem={({item}) => <GroupCard name={item} key={item}/>}
+                contentContainerStyle={groups.length === 0 && { flex: 1 }}
+                ListEmptyComponent={() => (
+                  <Text>Que tal cadastrar a primeira turma?</Text>
+                )}
+            />
+            <Button name="Criar uma nova turma"/>
 
         </Conteiner>
     );

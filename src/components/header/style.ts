@@ -12,7 +12,7 @@ export const Conteiner = styled.View<Props>`
     flex-direction: row;
 
     width: 100%;
-    padding: 32px;
+    padding: 32px 0;
 
 `;
 

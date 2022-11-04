@@ -4,6 +4,7 @@ import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/
 import theme from './src/theme';
 import Home from '@screens/home';
 import Loading from '@components/loading';
+import NewGroup from '@screens/newGroup';
 
 export default function App() {
 
@@ -13,7 +14,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <>
         <StatusBar backgroundColor="transparent" style="light" translucent/>
-        {fontsLoaded ? <Home /> : <Loading />}
+        {fontsLoaded ? <NewGroup /> : <Loading />}
       </>
     </ThemeProvider>
   );
