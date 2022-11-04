@@ -1,8 +1,10 @@
-import { Text } from "react-native";
+import { Conteiner, LoadIndicator } from "./style";
 
 function Loading() {
     return (
-        <Text>Carregando...</Text>
+        <Conteiner>
+            <LoadIndicator />
+        </Conteiner>
     );
 }
 
