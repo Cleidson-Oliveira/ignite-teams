@@ -4,7 +4,7 @@ import { useTheme } from "styled-components/native";
 
 interface Props extends TextInputProps {}
 
-function Input({...props}: Props) {
+export function Input({...props}: Props) {
     const {COLORS} = useTheme();
 
     return (
@@ -14,5 +14,3 @@ function Input({...props}: Props) {
         />
     );
 }
-
-export default Input;

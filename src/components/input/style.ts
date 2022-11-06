@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components/native";
 
 export const Conteiner = styled.TextInput`
-    width: 100%;
+    flex: 1;
     height: 56px;
     padding: 0 16px;
     border-radius: 6px;
