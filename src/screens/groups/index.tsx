@@ -1,13 +1,22 @@
+import { useState } from "react";
+import { FlatList, Text } from "react-native";
+
 import { Button } from "@components/button";
 import { GroupCard } from "@components/groupCard";
 import { Header } from "@components/header";
 import { Highlight } from "@components/highlight";
-import { useState } from "react";
-import { FlatList, Text } from "react-native";
+
 import { Conteiner } from "./style";
+import { useNavigation } from "@react-navigation/native";
 
 export function Groups () {
     const [ groups, setGroups ] = useState(["ignite", "ocb"]);
+
+    const navigation = useNavigation();
+
+    function handleNewGroup () {
+        navigation.navigate("new");
+    }
 
     return (
         <Conteiner>
@@ -25,7 +34,7 @@ export function Groups () {
                   <Text>Que tal cadastrar a primeira turma?</Text>
                 )}
             />
-            <Button name="Criar uma nova turma"/>
+            <Button name="Criar uma nova turma" onPress={handleNewGroup}/>
 
         </Conteiner>
     );
