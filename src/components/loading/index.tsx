@@ -1,11 +1,9 @@
 import { Conteiner, LoadIndicator } from "./style";
 
-function Loading() {
+export function Loading() {
     return (
         <Conteiner>
             <LoadIndicator />
         </Conteiner>
     );
 }
-
-export default Loading;

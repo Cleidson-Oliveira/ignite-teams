@@ -4,7 +4,7 @@ import { Highlight } from "@components/highlight";
 import { Input } from "@components/input";
 import { Conteiner, Content, Icon } from "./style";
 
-function NewGroup () {
+export function NewGroup () {
     return (
         <Conteiner>
             <Header showBackButton/>
@@ -20,5 +20,3 @@ function NewGroup () {
         </Conteiner>
     );
 }
-
-export default NewGroup;

@@ -13,7 +13,7 @@ import { Filter } from "@components/filter";
 import { PlayerCard } from "@components/playerCard";
 import { ListEmpty } from "@components/listEmpty";
 
-function Players () {
+export function Players () {
     const [ players, setPlayers ] = useState([{name: "cleidson", team: "ignite"}]);
     return (
         <Conteiner>
@@ -61,5 +61,3 @@ function Players () {
         </Conteiner>
     );
 }
-
-export default Players;

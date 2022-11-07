@@ -6,7 +6,7 @@ import { useState } from "react";
 import { FlatList, Text } from "react-native";
 import { Conteiner } from "./style";
 
-function Home() {
+export function Groups () {
     const [ groups, setGroups ] = useState(["ignite", "ocb"]);
 
     return (
@@ -30,5 +30,3 @@ function Home() {
         </Conteiner>
     );
 }
-
-export default Home;

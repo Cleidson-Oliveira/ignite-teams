@@ -1,11 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { ThemeProvider } from 'styled-components/native';
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { ThemeProvider } from 'styled-components/native';
+import { Loading } from '@components/loading';
+import { Routes } from 'src/routes';
 import theme from './src/theme';
-import Loading from '@components/loading';
-import Home from '@screens/home';
-import Players from '@screens/players';
-import NewGroup from '@screens/newGroup';
 
 export default function App() {
 
@@ -15,7 +13,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <>
         <StatusBar backgroundColor="transparent" style="light" translucent/>
-        {fontsLoaded ? <Players /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
       </>
     </ThemeProvider>
   );
